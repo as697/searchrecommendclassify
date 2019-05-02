@@ -1,0 +1,8 @@
+Flask==0.12.1
+nltk==3.4
+requests==2.20.1
+virtualenv==16.2.0
+virtualenvwrapper-win==1.2.5
+Werkzeug==0.14.1
+gunicorn==19.7.1
+textblob
