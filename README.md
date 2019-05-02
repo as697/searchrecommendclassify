@@ -1,4 +1,4 @@
-# application overview
+# Application Overview
 This is a search,recommendation and classification web application.
   Search: 
     user can enter a string and click on search, app returns the top 10 most matching 
@@ -12,13 +12,13 @@ This is a search,recommendation and classification web application.
     user can enter the details in the web form and get to see the prediction based on
    input provided. Model metrics can be seen by clicking on the metrics tab.
 
-# technologies used
+# Technologies Used
 1. python 3.7
 2. flask 
 3. HTML 5
 4. Heroku Cloud Platform
 
-# Installation steps
+# Installation Steps
 1. Clone the folder from the git hub to your local system.
 2. Open the cloned project in pycharm or any other IDE supporting python.
 3. Make sure the python interpreter is set to  3.7 version.
@@ -28,7 +28,7 @@ This is a search,recommendation and classification web application.
    libraries in nltk package. Install stopwords, punkt and porter_test.
 7. Locate the application.py file and execute it.
 
-# Deployment steps
+# Deployment Steps
 1. Install git on your local windows/MAC machine.
 2. Create an account on heroku cloud.
 3. Create a repository on heroku cloud.
@@ -55,7 +55,7 @@ This is a search,recommendation and classification web application.
 10. flask import Flask , render_template , request
 11. pickle
 
-# references
+# References
 1. https://www.analyticsvidhya.com/blog/2015/08/beginners-guide-learn-content-based-recommender-systems/ 
 2. https://www.nltk.org/ 
 3. https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/
