@@ -1,45 +1,72 @@
-# Python: Getting Started
+# application overview
+This is a search,recommendation and classification web application.
+  Search: 
+    user can enter a string and click on search, app returns the top 10 most matching 
+    documents in result.
+  
+  Recommendation: 
+    user can select a document and then hit on the recommend button besides that 
+  and application will return the top 10 recommended documents.
+  
+  Classification: 
+    user can enter the details in the web form and get to see the prediction based on
+   input provided. Model metrics can be seen by clicking on the metrics tab.
 
-A barebones Django app, which can easily be deployed to Heroku.
+# technologies used
+1. python 3.7
+2. flask 
+3. HTML 5
+4. Heroku Cloud Platform
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+# Installation steps
+1. Clone the folder from the git hub to your local system.
+2. Open the cloned project in pycharm or any other IDE supporting python.
+3. Make sure the python interpreter is set to  3.7 version.
+4. Open python terminal and install nltk using pip install nltk.
+5. After intallation type import nltk in python terminal and hit enter.
+6. Type nltk.download() and hit enter , this will open a wizard showing all. 
+   libraries in nltk package. Install stopwords, punkt and porter_test.
+7. Locate the application.py file and execute it.
 
-## Running Locally
+# Deployment steps
+1. Install git on your local windows/MAC machine.
+2. Create an account on heroku cloud.
+3. Create a repository on heroku cloud.
+4. Open command prompt and navigate to project root directory.
+5. Enter below commands sequentially.
+  a. heroku login.
+  b. git init.
+  c. git add .
+  d. git commit -m "enter any commit message".
+  e. git push heroku master.
+  f. heroku open.
+6. After the above steps the application is deployed and launched in browser.
 
-Make sure you have Python 3.7 [installed locally](http://install.python-guide.org). To push to Heroku, you'll need to install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), as well as [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
+# Libraries
+1. re
+2. random
+3. time
+4. math
+5. csv
+6. nltk.corpus import stopwords
+7. textblob import TextBlob
+8. nltk.stem import PorterStemmer
+9. collections import defaultdict
+10. flask import Flask , render_template , request
+11. pickle
 
-```sh
-$ git clone https://github.com/heroku/python-getting-started.git
-$ cd python-getting-started
+# references
+1. https://www.analyticsvidhya.com/blog/2015/08/beginners-guide-learn-content-based-recommender-systems/ 
+2. https://www.nltk.org/ 
+3. https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/
+4. https://pythonprogramming.net/lemmatizing-nltk-tutorial/ 
+5. https://docs.python.org/2/library/pickle.html 
+6. https://dzone.com/articles/naive-bayes-tutorial-naive-bayes-classifier-in-pyt 
+7. https://en.wikipedia.org/wiki/Bayes%27_theorem 
+8. https://machinelearningmastery.com/naive-bayes-for-machine-learning/ 
 
-$ python3 -m venv getting-started
-$ pip install -r requirements.txt
+# Author
+1. Abhay Singh
 
-$ createdb python_getting_started
 
-$ python manage.py migrate
-$ python manage.py collectstatic
 
-$ heroku local
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
-```
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
