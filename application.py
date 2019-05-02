@@ -234,7 +234,7 @@ def searchreviews():
                                                                          documentcorpusindexedtfidf)
 
     if searchquery !=None:
-        return render_template('tedresult.html',results=cosineresult , searchquery=searchquery )
+        return render_template('tedresult.html',results=cosineresult , searchquery=searchquery ,tfidfscore=tfidfquerytermsdictionary)
     if searchquery1!=None:
         return render_template('recommendationresult1.html', results=cosineresult ,recommedationfor = searchquery1)
 
@@ -474,8 +474,22 @@ def calculateCosineSimilarityBetweebQueryandDocuments(tfidfquerytermsdictionary 
     returnresultcount = 0
     print(result)
     #print(result)
+    print("query tfidf score :{}".format(tfidfquerytermsdictionary))
     for k,v in result:
-           r = textual_reviews[k] +"Cosine simlarity score"+str(v)[0:4]
+
+           print("idf score :{}".format(documentindexedtfidfscoreofcorpus[k]))
+           d= documentindexedtfidfscoreofcorpus[k]
+           r = textual_reviews[k] +"["+ " simlarity score :"+str(v)[0:4]
+           scoreofqueryterms =[]
+           for q in tfidfquerytermsdictionary:
+               terms = ""
+
+               if str(q) in d:
+                terms = str(q) +":"+str(d[str(q)])
+                scoreofqueryterms.append(terms)
+
+           r= r+  "tf*idf score "+str(scoreofqueryterms)+"]"
+
            list.append(r)
            returnresultcount = returnresultcount+1
            if returnresultcount == 10:
