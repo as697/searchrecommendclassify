@@ -1,7 +1,7 @@
 #
 # Author: Abhay Singh
 # UTA ID: 1********9
-# This a an application written in python for performing text search ,recommendation and classification.
+# This is an application written in python for performing text search ,recommendation and classification.
 #
 
 
